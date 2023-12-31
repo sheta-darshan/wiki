@@ -1,0 +1,10 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block body%}
+    <form action="{% url 'add' %}" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit">
+    </form>
+<a href="{% url 'index' %}"> view tasks</a>
+{% endblock %}
